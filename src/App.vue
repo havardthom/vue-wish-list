@@ -1,8 +1,9 @@
 <template>
   <v-app>
+    <Snow color="#ffffff"/>
     <v-app-bar
       app
-      color="primary"
+      style="background: linear-gradient(to right, #aa3a38, #2f7336 )"
       dark
     >
       <div class="d-flex align-center">
@@ -10,19 +11,11 @@
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="https://www.freeiconspng.com/uploads/christmas-tree-icon-15.png"
           transition="scale-transition"
-          width="40"
+          width="60"
         />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <v-toolbar-title>GBS Technical Meetup</v-toolbar-title>
       </div>
       
 
@@ -48,11 +41,16 @@
 
 <script>
 
+import Snow from 'vue-niege'
 
 export default {
   name: 'App',
+  components: { Snow },
   data: () => ({
     //
   }),
+  created () {
+    this.$vuetify.theme.dark = true
+  }
 };
 </script>
